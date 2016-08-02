@@ -1,21 +1,4 @@
-var app = angular.module('app', ['ngResource', 'ngRoute']);
-
-/**
- * Configuração das Rotas (páginas do sistema)
- */
-app.config(['$routeProvider', function($routerProvider){
-	$routerProvider
-		.when('/', {
-			templateUrl: 'home.html'
-		})
-		
-		.when('/noticias', {
-			templateUrl: 'noticias-list.html',
-			controller: 'NoticiaListController'
-		})
-	;
-}]);
-
+var app = angular.module('app', ['ngResource']);
 
 //NoticiaService
 app.factory('NoticiaService', function($resource) {
